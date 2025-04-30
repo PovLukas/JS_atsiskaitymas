@@ -15,3 +15,13 @@ export  const fetchItem = async (id) => {
     const data = await response.json();
     return data
 }
+
+export const deleteItem = async (id) => {
+
+    const response = await fetch(`https://6807350ae81df7060eb92d15.mockapi.io/recipes/${id}`, {
+        method: "DELETE"
+    });
+    const data = await response.json()
+    return data
+}
+
