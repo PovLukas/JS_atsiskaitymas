@@ -1,7 +1,7 @@
 import { fetchItem } from "../utils/fetch.js";
 import { deleteItem } from "../utils/fetch.js";
 
-
+const msg = document.getElementById("msg")
 const button = document.getElementById("btn-delete")
 const name = document.createElement("h3")
 const img = document.createElement("img")
@@ -10,6 +10,14 @@ const description = document.createElement("p")
 const location = document.createElement("p")
 const card = document.createElement("div")
 card.setAttribute("class", "card")
+
+const returnButton = document.createElement("button")
+document.body.prepend(returnButton)
+returnButton.textContent = "Return"
+
+returnButton.addEventListener("click", () => {
+  window.location.href = "../index.html"
+})
 
 const wrapper = document.getElementById("wrapper")
 wrapper.append(img, card)
@@ -31,7 +39,7 @@ button.addEventListener("click", async () => {
     const item = await deleteItem(id)
 
     if (item) {
-        console.log("deleted")
+        msg.textContent = "Item was deleted!"
     }
 })
 
