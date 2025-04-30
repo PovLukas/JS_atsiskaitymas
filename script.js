@@ -6,7 +6,10 @@ const buildShop = (items) => {
     items.sort((a, b) => {
         return a.price > b.price ? 1 : -1
     }).forEach((e) => {
-        const card = document.createElement("div")
+        const card = document.createElement("a")
+        card.href = `./products/index.html?id=${e.id}`
+        
+        card.setAttribute("class", "card")
 
         const name = document.createElement("h3")
         name.textContent = e.title
