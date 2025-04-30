@@ -18,7 +18,7 @@ const itemPage = async (item) => {
     name.textContent = item.title
     price.textContent = item.price
     description.textContent = item.description
-    location.textContent = item.location
+    location.textContent = item.soldWhere
 }
 
 const buildItem = async () => {
