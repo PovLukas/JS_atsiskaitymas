@@ -1,6 +1,11 @@
 import { fetchShop } from "./utils/fetch.js";
 
 const wrapper = document.getElementById("wrapper")
+const toFormBtn = document.getElementById("toForm")
+
+toFormBtn.addEventListener("click", () => {
+    window.location.href = "./insert/index.html"
+})
 
 const buildShop = (items) => {
     items.sort((a, b) => {

@@ -25,3 +25,12 @@ export const deleteItem = async (id) => {
     return data
 }
 
+export const insertItem = async (data) => {
+    const response = await fetch(`${URL}recipes`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {"Content-Type": "application/json"}
+    })
+    const item = await response.json()
+    return item
+} 
