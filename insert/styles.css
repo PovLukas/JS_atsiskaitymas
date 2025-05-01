@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#form-wrapper input {
+    padding: 0.6rem 1.8rem;
+}
+
+#form-wrapper button {
+    padding: 1rem 2rem;
+}
