@@ -28,3 +28,13 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
 }
+
+#toForm {
+    padding: 1rem;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
