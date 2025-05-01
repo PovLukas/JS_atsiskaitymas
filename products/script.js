@@ -11,12 +11,10 @@ const location = document.createElement("p")
 const card = document.createElement("div")
 card.setAttribute("class", "card")
 
-const returnButton = document.createElement("button")
-document.body.prepend(returnButton)
-returnButton.textContent = "Return"
+const returnBtn = document.getElementById("return-btn")
 
-returnButton.addEventListener("click", () => {
-  window.location.href = "../index.html"
+returnBtn.addEventListener("click", () => {
+    window.location.href = "../index.html"
 })
 
 const wrapper = document.getElementById("wrapper")
