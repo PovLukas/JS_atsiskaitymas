@@ -11,9 +11,23 @@ const btn = document.getElementById("submit-btn")
 const success = document.getElementById("success")
 const returnBtn = document.getElementById("return-btn")
 
+const urlStatus = document.getElementById('url-status');
+
 returnBtn.addEventListener("click", () => {
     window.location.href = "../index.html"
 })
+
+const isValidURL = (str) => /^(https?:\/\/)?([\w\-]+\.)+[\w]{2,}(\/\S*)?$/.test(str);
+
+img.addEventListener('input', () => {
+    if (isValidURL(img.value)) {
+      urlStatus.textContent = '✅';
+    } else {
+      urlStatus.textContent = '❌'; 
+    }
+  });
+
+
 
 btn.addEventListener("click", () => {
     const data = {
@@ -29,7 +43,7 @@ btn.addEventListener("click", () => {
         return
     }
 
-    const isValidURL = (str) => /^(https?:\/\/)?([\w\-]+\.)+[\w]{2,}(\/\S*)?$/.test(str);
+    
 
     if (!isValidURL(img.value)) {
         console.log("Invalid URL")
