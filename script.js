@@ -35,7 +35,6 @@ const buildShop = (items) => {
 
 const buildPage = async () => {
     const items = await fetchShop()
-    console.log(items)
     buildShop(items)
 }
 
