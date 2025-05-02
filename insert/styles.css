@@ -59,6 +59,8 @@ body {
     border-radius: 6px;
     font-size: 16px;
     transition: border 0.3s, box-shadow 0.3s;
+    font-family: sans-serif;
+    font-size: 1.2rem;
   }
   
   #form-wrapper input:focus {
