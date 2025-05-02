@@ -30,7 +30,7 @@ const itemPage = async (item) => {
     name.textContent = item.title
     price.textContent = `Kaina ${item.price}$`
     description.textContent = `Bulvyciu tipas ${item.description}`
-    location.textContent = `Rasti galite ${item.soldWhere}`
+    location.textContent = `Kur rasti: ${item.soldWhere}`
 }
 
 button.addEventListener("click", async () => {
