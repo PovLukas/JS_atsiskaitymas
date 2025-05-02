@@ -36,6 +36,13 @@ btn.addEventListener("click", () => {
         return
     } 
 
+    const isValidPrice = (str) => /^-?\d+(\.\d+)?$/.test(str);
+
+    if (!isValidPrice(price.value)) {
+        console.log("Price needs to be a number")
+        return
+    }
+
     insertItem(data)
 
     if (data) {
