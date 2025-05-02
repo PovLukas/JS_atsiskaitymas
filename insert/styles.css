@@ -8,8 +8,6 @@ body {
     background-color: rgb(241, 250, 250);
 }
 
-
-
 #success {
     color: rgb(106, 158, 86);
     text-align: center;
@@ -19,7 +17,7 @@ body {
 .btn-wrapper {
     display: flex;
     justify-content: center;
-    padding: 2rem 0rem;
+    padding-top: 2rem;
 }
 
 .btn-wrapper button {

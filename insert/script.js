@@ -1,4 +1,5 @@
 import { insertItem } from "../utils/fetch.js";
+import { validation, isValidPrice, isValidURL } from "../utils/validation.js";
 
 
 const name = document.getElementById("name")
@@ -17,7 +18,7 @@ returnBtn.addEventListener("click", () => {
     window.location.href = "../index.html"
 })
 
-const isValidURL = (str) => /^(https?:\/\/)?([\w\-]+\.)+[\w]{2,}(\/\S*)?$/.test(str);
+
 
 img.addEventListener('input', () => {
     if (isValidURL(img.value)) {
@@ -26,7 +27,6 @@ img.addEventListener('input', () => {
       urlStatus.textContent = '❌'; 
     }
   });
-
 
 
 btn.addEventListener("click", () => {
@@ -38,22 +38,7 @@ btn.addEventListener("click", () => {
         img: img.value,
     }
 
-    if (!data.title || !data.price || !data.description || !data.soldWhere || !data.img) {
-        console.log("Fill all fields")
-        return
-    }
-
-    
-
-    if (!isValidURL(img.value)) {
-        console.log("Invalid URL")
-        return
-    } 
-
-    const isValidPrice = (str) => /^-?\d+(\.\d+)?$/.test(str);
-
-    if (!isValidPrice(price.value)) {
-        console.log("Price needs to be a number")
+    if (!validation(data)) {
         return
     }
 

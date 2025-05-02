@@ -108,3 +108,19 @@ body {
     right: 0;
     opacity: 1;
   }
+
+  @media (max-width: 1000px) {
+    .wrapper {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+    .wrapper:has(.card:hover) .card:not(:hover) {
+      filter: none;
+      transform: scale(0.9, 0.9);
+    }
+  }
