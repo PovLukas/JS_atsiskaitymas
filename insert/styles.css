@@ -4,32 +4,22 @@
     box-sizing: border-box;
 }
 
-#form-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+body {
+    background-color: rgb(241, 250, 250);
 }
 
-#form-wrapper input {
-    padding: 0.6rem 1.8rem;
-}
 
-#form-wrapper button {
-    padding: 1rem 2rem;
-}
 
 #success {
-    color: green;
+    color: rgb(106, 158, 86);
     text-align: center;
+    font-size: 2rem;
 }
 
 .btn-wrapper {
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 2rem 0rem;
 }
 
 .btn-wrapper button {
@@ -38,13 +28,91 @@
 
 .imgInputWrap {
     position: relative;
+    width: 100%;
+    margin-bottom: 18px;
+    
 }
+
+#submit-btn {
+    margin-top: 2rem;
+}
+
+
+#form-wrapper {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px 25px;
+    background: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem;
+  }
+  
+ 
+  #form-wrapper input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  #form-wrapper input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none;
+  }
+
+
 
 #url-status {
     position: absolute;
-    right: -30px;
-    top: 50%;
+    right: 10px;
+    top: 35%;
     transform: translateY(-50%);
     font-size: 1.2rem;
     pointer-events: none;
+  }
+
+  .btn {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 220px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    border: 1px solid black;
+  }
+  
+ .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  .btn:hover {
+    color: #fff;
+  }
+  
+  .btn:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
   }

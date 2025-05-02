@@ -85,10 +85,6 @@ body {
     border: 1px solid black;
   }
   
-  /* span {
-    display: inline-block;
-    transform: skew(21deg);
-  } */
   
  .btn::before {
     content: '';
